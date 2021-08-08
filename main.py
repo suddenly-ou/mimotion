@@ -395,18 +395,6 @@ if __name__ == "__main__":
                 step = ''
             push_msg += main(user, passwd, step) + '\n'
 
-        push = {
-            'wx': to_push.to_push_wx,
-            'nwx': to_push.to_push_server,
-            'tg': to_push.to_push_tg,
-            'qwx': to_push.to_wxpush,
-            'pp': to_push.to_push_pushplus,
-            'off': to_push.no_push
-        }
-        try:
-            push[Pm]()
-        except KeyError:
-            print('推送选项有误！')
-            exit(0)
+        
     else:
         print('用户名和密码数量不对')
